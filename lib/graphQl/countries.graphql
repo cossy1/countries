@@ -1,0 +1,16 @@
+query FetchCountries($filter: CountryFilterInput){
+  countries(filter: $filter){
+    name,
+    code,
+    emoji,
+    phone,
+    continent {
+      name
+    },
+    capital,
+    currency,
+    states {
+      name,
+    }
+  }
+}
