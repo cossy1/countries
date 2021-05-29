@@ -1,22 +1,23 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 class SingleCountry extends StatelessWidget {
   SingleCountry(
       {required this.name,
       required this.phone,
-      // required this.states,
-      // required this.capital,
-      // required this.continent,
+    //  required this.states,
+       required this.capital,
+       required this.continent,
       required this.code
       });
 
   final String name;
   final String code;
   final String phone;
-  // final String states;
-  // final String continent;
-  // final String capital;
+ //  final String states;
+   final String continent;
+   final String capital;
 
   @override
   Widget build(BuildContext context) {
@@ -43,6 +44,25 @@ class SingleCountry extends StatelessWidget {
               Column(
                 children: [Text('CODE'),
                Padding(padding: EdgeInsets.only(top: 10), child:  Text(code),)
+
+                ],
+              ),
+
+              Column(
+                children: [Text('CONTINENT'),
+                  Padding(padding: EdgeInsets.only(top: 10), child:  Text(continent),)
+                ],
+              ),
+
+              // Column(
+              //   children: [Text('STATES'),
+              //     Padding(padding: EdgeInsets.only(top: 10), child:  Text(states),)
+              //   ],
+              // ),
+
+              Column(
+                children: [Text('CAPITAL'),
+                  Padding(padding: EdgeInsets.only(top: 10), child:  Text(capital),)
 
                 ],
               ),

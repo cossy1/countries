@@ -36,6 +36,7 @@ class MyApp extends StatelessWidget {
                 );
               }
               final countries = response.data!.countries;
+
               return ListView.builder(
                   itemCount: countries.length,
                   itemBuilder: (context, index) => GestureDetector(
@@ -44,6 +45,9 @@ class MyApp extends StatelessWidget {
                         code: countries[index].code,
                         phone: countries[index].phone,
                         name: countries[index].name,
+                        continent: countries[index].continent.name,
+                        capital: countries[index].capital.toString(),
+                       // states: countries[index].states.forEach((s) => s.name),
                       )));
                     },
                     child:  ListTile(
